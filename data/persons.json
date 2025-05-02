@@ -1,653 +1,653 @@
 [
   {
-    "firstName": "Alicja",
-    "lastName": "Rutkowska",
-    "age": 39,
-    "gender": "K",
-    "college": "UNIKAT"
+    "imie": "Alicja",
+    "nazwisko": "Rutkowska",
+    "wiek": 39,
+    "plec": "K",
+    "uczelnia": "UNIKAT"
   },
   {
-    "firstName": "Wojciech",
-    "lastName": "Sawicki",
-    "age": 48,
-    "gender": "M",
-    "college": "UNIWPR"
+    "imie": "Wojciech",
+    "nazwisko": "Sawicki",
+    "wiek": 48,
+    "plec": "M",
+    "uczelnia": "UNIWPR"
   },
   {
-    "firstName": "Ewelina",
-    "lastName": "Baranowska",
-    "age": 36,
-    "gender": "K",
-    "college": "UNISWD"
+    "imie": "Ewelina",
+    "nazwisko": "Baranowska",
+    "wiek": 36,
+    "plec": "K",
+    "uczelnia": "UNISWD"
   },
   {
-    "firstName": "Mariusz",
-    "lastName": "Sowa",
-    "age": 46,
-    "gender": "M",
-    "college": "AWFWRC"
+    "imie": "Mariusz",
+    "nazwisko": "Sowa",
+    "wiek": 46,
+    "plec": "M",
+    "uczelnia": "AWFWRC"
   },
   {
-    "firstName": "Radosław",
-    "lastName": "Czajkowski",
-    "age": 40,
-    "gender": "M",
-    "college": "POLLOD"
+    "imie": "Radosław",
+    "nazwisko": "Czajkowski",
+    "wiek": 40,
+    "plec": "M",
+    "uczelnia": "POLLOD"
   },
   {
-    "firstName": "Beata",
-    "lastName": "Sadowska",
-    "age": 39,
-    "gender": "K",
-    "college": "POLSLK"
+    "imie": "Beata",
+    "nazwisko": "Sadowska",
+    "wiek": 39,
+    "plec": "K",
+    "uczelnia": "POLSLK"
   },
   {
-    "firstName": "Sylwia",
-    "lastName": "Tomaszewska",
-    "age": 38,
-    "gender": "K",
-    "college": "UNIGDA"
+    "imie": "Sylwia",
+    "nazwisko": "Tomaszewska",
+    "wiek": 38,
+    "plec": "K",
+    "uczelnia": "UNIGDA"
   },
   {
-    "firstName": "Robert",
-    "lastName": "Michalski",
-    "age": 46,
-    "gender": "M",
-    "college": "POLWAR"
+    "imie": "Robert",
+    "nazwisko": "Michalski",
+    "wiek": 46,
+    "plec": "M",
+    "uczelnia": "POLWAR"
   },
   {
-    "firstName": "Szymon",
-    "lastName": "Ostrowski",
-    "age": 45,
-    "gender": "M",
-    "college": "UNIGDA"
+    "imie": "Szymon",
+    "nazwisko": "Ostrowski",
+    "wiek": 45,
+    "plec": "M",
+    "uczelnia": "UNIGDA"
   },
   {
-    "firstName": "Małgorzata",
-    "lastName": "Jabłońska",
-    "age": 43,
-    "gender": "K",
-    "college": "POLPOZ"
+    "imie": "Małgorzata",
+    "nazwisko": "Jabłońska",
+    "wiek": 43,
+    "plec": "K",
+    "uczelnia": "POLPOZ"
   },
   {
-    "firstName": "Marzena",
-    "lastName": "Chmielewska",
-    "age": 45,
-    "gender": "K",
-    "college": "UMPOZN"
+    "imie": "Marzena",
+    "nazwisko": "Chmielewska",
+    "wiek": 45,
+    "plec": "K",
+    "uczelnia": "UMPOZN"
   },
   {
-    "firstName": "Michał",
-    "lastName": "Dąbrowski",
-    "age": 36,
-    "gender": "M",
-    "college": "AKAGUH"
+    "imie": "Michał",
+    "nazwisko": "Dąbrowski",
+    "wiek": 36,
+    "plec": "M",
+    "uczelnia": "AKAGUH"
   },
   {
-    "firstName": "Ewa",
-    "lastName": "Kaczmarek",
-    "age": 39,
-    "gender": "K",
-    "college": "POLWRO"
+    "imie": "Ewa",
+    "nazwisko": "Kaczmarek",
+    "wiek": 39,
+    "plec": "K",
+    "uczelnia": "POLWRO"
   },
   {
-    "firstName": "Andrzej",
-    "lastName": "Cieślak",
-    "age": 57,
-    "gender": "M",
-    "college": "UMGDAN"
+    "imie": "Andrzej",
+    "nazwisko": "Cieślak",
+    "wiek": 57,
+    "plec": "M",
+    "uczelnia": "UMGDAN"
   },
   {
-    "firstName": "Justyna",
-    "lastName": "Sikora",
-    "age": 37,
-    "gender": "K",
-    "college": "SGHMWZ"
+    "imie": "Justyna",
+    "nazwisko": "Sikora",
+    "wiek": 37,
+    "plec": "K",
+    "uczelnia": "SGHMWZ"
   },
   {
-    "firstName": "Aneta",
-    "lastName": "Malinowska",
-    "age": 41,
-    "gender": "K",
-    "college": "UNIMED"
+    "imie": "Aneta",
+    "nazwisko": "Malinowska",
+    "wiek": 41,
+    "plec": "K",
+    "uczelnia": "UNIMED"
   },
   {
-    "firstName": "Kamila",
-    "lastName": "Gajewska",
-    "age": 37,
-    "gender": "K",
-    "college": "UNIWPR"
+    "imie": "Kamila",
+    "nazwisko": "Gajewska",
+    "wiek": 37,
+    "plec": "K",
+    "uczelnia": "UNIWPR"
   },
   {
-    "firstName": "Adam",
-    "lastName": "Majewski",
-    "age": 55,
-    "gender": "M",
-    "college": "UNIPOZ"
+    "imie": "Adam",
+    "nazwisko": "Majewski",
+    "wiek": 55,
+    "plec": "M",
+    "uczelnia": "UNIPOZ"
   },
   {
-    "firstName": "Tytus",
-    "lastName": "Bomba",
-    "age": 51,
-    "gender": "M",
-    "college": "AKAGUH"
+    "imie": "Tytus",
+    "nazwisko": "Bomba",
+    "wiek": 51,
+    "plec": "M",
+    "uczelnia": "AKAGUH"
   },
   {
-    "firstName": "Jan",
-    "lastName": "Grabowski",
-    "age": 60,
-    "gender": "M",
-    "college": "POLWRO"
+    "imie": "Jan",
+    "nazwisko": "Grabowski",
+    "wiek": 60,
+    "plec": "M",
+    "uczelnia": "POLWRO"
   },
   {
-    "firstName": "Tadeusz",
-    "lastName": "Laskowski",
-    "age": 63,
-    "gender": "M",
-    "college": "UNISBC"
+    "imie": "Tadeusz",
+    "nazwisko": "Laskowski",
+    "wiek": 63,
+    "plec": "M",
+    "uczelnia": "UNISBC"
   },
   {
-    "firstName": "Dominika",
-    "lastName": "Olszewska",
-    "age": 37,
-    "gender": "K",
-    "college": "UMRTOR"
+    "imie": "Dominika",
+    "nazwisko": "Olszewska",
+    "wiek": 37,
+    "plec": "K",
+    "uczelnia": "UMRTOR"
   },
   {
-    "firstName": "Paweł",
-    "lastName": "Górski",
-    "age": 41,
-    "gender": "M",
-    "college": "UNIKAT"
+    "imie": "Paweł",
+    "nazwisko": "Górski",
+    "wiek": 41,
+    "plec": "M",
+    "uczelnia": "UNIKAT"
   },
   {
-    "firstName": "Klaudia",
-    "lastName": "Szczepańska",
-    "age": 35,
-    "gender": "K",
-    "college": "UMKLUB"
+    "imie": "Klaudia",
+    "nazwisko": "Szczepańska",
+    "wiek": 35,
+    "plec": "K",
+    "uczelnia": "UMKLUB"
   },
   {
-    "firstName": "Dariusz",
-    "lastName": "Czerwiński",
-    "age": 47,
-    "gender": "M",
-    "college": "AWFPOZ"
+    "imie": "Dariusz",
+    "nazwisko": "Czerwiński",
+    "wiek": 47,
+    "plec": "M",
+    "uczelnia": "AWFPOZ"
   },
   {
-    "firstName": "Martyna",
-    "lastName": "Czapla",
-    "age": 32,
-    "gender": "K",
-    "college": "UAMSIE"
+    "imie": "Martyna",
+    "nazwisko": "Czapla",
+    "wiek": 32,
+    "plec": "K",
+    "uczelnia": "UAMSIE"
   },
   {
-    "firstName": "Karolina",
-    "lastName": "Król",
-    "age": 34,
-    "gender": "K",
-    "college": "UNIPOZ"
+    "imie": "Karolina",
+    "nazwisko": "Król",
+    "wiek": 34,
+    "plec": "K",
+    "uczelnia": "UNIPOZ"
   },
   {
-    "firstName": "Paulina",
-    "lastName": "Głowacka",
-    "age": 38,
-    "gender": "K",
-    "college": "UNIOPL"
+    "imie": "Paulina",
+    "nazwisko": "Głowacka",
+    "wiek": 38,
+    "plec": "K",
+    "uczelnia": "UNIOPL"
   },
   {
-    "firstName": "Franciszek",
-    "lastName": "Nawrocki",
-    "age": 60,
-    "gender": "M",
-    "college": "UMPOZN"
+    "imie": "Franciszek",
+    "nazwisko": "Nawrocki",
+    "wiek": 60,
+    "plec": "M",
+    "uczelnia": "UMPOZN"
   },
   {
-    "firstName": "Przemysław",
-    "lastName": "Kołodziej",
-    "age": 37,
-    "gender": "M",
-    "college": "POLSLK"
+    "imie": "Przemysław",
+    "nazwisko": "Kołodziej",
+    "wiek": 37,
+    "plec": "M",
+    "uczelnia": "POLSLK"
   },
   {
-    "firstName": "Olga",
-    "lastName": "Przybylska",
-    "age": 36,
-    "gender": "K",
-    "college": "UMKRAK"
+    "imie": "Olga",
+    "nazwisko": "Przybylska",
+    "wiek": 36,
+    "plec": "K",
+    "uczelnia": "UMKRAK"
   },
   {
-    "firstName": "Henryk",
-    "lastName": "Andrzejewski",
-    "age": 61,
-    "gender": "M",
-    "college": "AWFWAR"
+    "imie": "Henryk",
+    "nazwisko": "Andrzejewski",
+    "wiek": 61,
+    "plec": "M",
+    "uczelnia": "AWFWAR"
   },
   {
-    "firstName": "Alina",
-    "lastName": "Kowalewska",
-    "age": 41,
-    "gender": "K",
-    "college": "AWFGDA"
+    "imie": "Alina",
+    "nazwisko": "Kowalewska",
+    "wiek": 41,
+    "plec": "K",
+    "uczelnia": "AWFGDA"
   },
   {
-    "firstName": "Jolanta",
-    "lastName": "Stasiak",
-    "age": 45,
-    "gender": "K",
-    "college": "AWFWRC"
+    "imie": "Jolanta",
+    "nazwisko": "Stasiak",
+    "wiek": 45,
+    "plec": "K",
+    "uczelnia": "AWFWRC"
   },
   {
-    "firstName": "Mateusz",
-    "lastName": "Walczak",
-    "age": 36,
-    "gender": "M",
-    "college": "UNILOD"
+    "imie": "Mateusz",
+    "nazwisko": "Walczak",
+    "wiek": 36,
+    "plec": "M",
+    "uczelnia": "UNILOD"
   },
   {
-    "firstName": "Natalia",
-    "lastName": "Adamczyk",
-    "age": 32,
-    "gender": "K",
-    "college": "UNIWRO"
+    "imie": "Natalia",
+    "nazwisko": "Adamczyk",
+    "wiek": 32,
+    "plec": "K",
+    "uczelnia": "UNIWRO"
   },
   {
-    "firstName": "Joanna",
-    "lastName": "Zalewska",
-    "age": 35,
-    "gender": "K",
-    "college": "POLWAR"
+    "imie": "Joanna",
+    "nazwisko": "Zalewska",
+    "wiek": 35,
+    "plec": "K",
+    "uczelnia": "POLWAR"
   },
   {
-    "firstName": "Ignacy",
-    "lastName": "Sikorski",
-    "age": 55,
-    "gender": "M",
-    "college": "UMWROC"
+    "imie": "Ignacy",
+    "nazwisko": "Sikorski",
+    "wiek": 55,
+    "plec": "M",
+    "uczelnia": "UMWROC"
   },
   {
-    "firstName": "Tomasz",
-    "lastName": "Jankowski",
-    "age": 47,
-    "gender": "M",
-    "college": "UNIWAR"
+    "imie": "Tomasz",
+    "nazwisko": "Jankowski",
+    "wiek": 47,
+    "plec": "M",
+    "uczelnia": "UNIWAR"
   },
   {
-    "firstName": "Artur",
-    "lastName": "Stępień",
-    "age": 48,
-    "gender": "M",
-    "college": "UNIMED"
+    "imie": "Artur",
+    "nazwisko": "Stępień",
+    "wiek": 48,
+    "plec": "M",
+    "uczelnia": "UNIMED"
   },
   {
-    "firstName": "Iwona",
-    "lastName": "Urbańska",
-    "age": 44,
-    "gender": "K",
-    "college": "UNIWRO"
+    "imie": "Iwona",
+    "nazwisko": "Urbańska",
+    "wiek": 44,
+    "plec": "K",
+    "uczelnia": "UNIWRO"
   },
   {
-    "firstName": "Jakub",
-    "lastName": "Kamiński",
-    "age": 37,
-    "gender": "M",
-    "college": "UNIJAG"
+    "imie": "Jakub",
+    "nazwisko": "Kamiński",
+    "wiek": 37,
+    "plec": "M",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Krystian",
-    "lastName": "Włodarczyk",
-    "age": 38,
-    "gender": "M",
-    "college": "UMKLUB"
+    "imie": "Krystian",
+    "nazwisko": "Włodarczyk",
+    "wiek": 38,
+    "plec": "M",
+    "uczelnia": "UMKLUB"
   },
   {
-    "firstName": "Jacek",
-    "lastName": "Adamski",
-    "age": 53,
-    "gender": "M",
-    "college": "UNIOPL"
+    "imie": "Jacek",
+    "nazwisko": "Adamski",
+    "wiek": 53,
+    "plec": "M",
+    "uczelnia": "UNIOPL"
   },
   {
-    "firstName": "Elżbieta",
-    "lastName": "Krawczyk",
-    "age": 52,
-    "gender": "K",
-    "college": "POLLOD"
+    "imie": "Elżbieta",
+    "nazwisko": "Krawczyk",
+    "wiek": 52,
+    "plec": "K",
+    "uczelnia": "POLLOD"
   },
   {
-    "firstName": "Dawid",
-    "lastName": "Piotrowski",
-    "age": 41,
-    "gender": "M",
-    "college": "KULKAT"
+    "imie": "Dawid",
+    "nazwisko": "Piotrowski",
+    "wiek": 41,
+    "plec": "M",
+    "uczelnia": "KULKAT"
   },
   {
-    "firstName": "Jerzy",
-    "lastName": "Mazur",
-    "age": 57,
-    "gender": "M",
-    "college": "UMKLUB"
+    "imie": "Jerzy",
+    "nazwisko": "Mazur",
+    "wiek": 57,
+    "plec": "M",
+    "uczelnia": "UMKLUB"
   },
   {
-    "firstName": "Barbara",
-    "lastName": "Pawlak",
-    "age": 58,
-    "gender": "K",
-    "college": "POLWAR"
+    "imie": "Barbara",
+    "nazwisko": "Pawlak",
+    "wiek": 58,
+    "plec": "K",
+    "uczelnia": "POLWAR"
   },
   {
-    "firstName": "Urszula",
-    "lastName": "Zakrzewska",
-    "age": 52,
-    "gender": "K",
-    "college": "UMGDAN"
+    "imie": "Urszula",
+    "nazwisko": "Zakrzewska",
+    "wiek": 52,
+    "plec": "K",
+    "uczelnia": "UMGDAN"
   },
   {
-    "firstName": "Damian",
-    "lastName": "Zalewski",
-    "age": 42,
-    "gender": "M",
-    "college": "UNIGDA"
+    "imie": "Damian",
+    "nazwisko": "Zalewski",
+    "wiek": 42,
+    "plec": "M",
+    "uczelnia": "UNIGDA"
   },
   {
-    "firstName": "Marcin",
-    "lastName": "Wójcik",
-    "age": 38,
-    "gender": "M",
-    "college": "UNIPOZ"
+    "imie": "Marcin",
+    "nazwisko": "Wójcik",
+    "wiek": 38,
+    "plec": "M",
+    "uczelnia": "UNIPOZ"
   },
   {
-    "firstName": "Rafał",
-    "lastName": "Bomba",
-    "age": 31,
-    "gender": "M",
-    "college": "UNIJAG"
+    "imie": "Rafał",
+    "nazwisko": "Bomba",
+    "wiek": 31,
+    "plec": "M",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Kinga",
-    "lastName": "Kołodziejczyk",
-    "age": 36,
-    "gender": "K",
-    "college": "KULKAT"
+    "imie": "Kinga",
+    "nazwisko": "Kołodziejczyk",
+    "wiek": 36,
+    "plec": "K",
+    "uczelnia": "KULKAT"
   },
   {
-    "firstName": "Wioletta",
-    "lastName": "Krajewska",
-    "age": 44,
-    "gender": "K",
-    "college": "AWFPOZ"
+    "imie": "Wioletta",
+    "nazwisko": "Krajewska",
+    "wiek": 44,
+    "plec": "K",
+    "uczelnia": "AWFPOZ"
   },
   {
-    "firstName": "Milena",
-    "lastName": "Janik",
-    "age": 36,
-    "gender": "K",
-    "college": "UNISBC"
+    "imie": "Milena",
+    "nazwisko": "Janik",
+    "wiek": 36,
+    "plec": "K",
+    "uczelnia": "UNISBC"
   },
   {
-    "firstName": "Lidia",
-    "lastName": "Wysocka",
-    "age": 46,
-    "gender": "K",
-    "college": "KULKAT"
+    "imie": "Lidia",
+    "nazwisko": "Wysocka",
+    "wiek": 46,
+    "plec": "K",
+    "uczelnia": "KULKAT"
   },
   {
-    "firstName": "Monika",
-    "lastName": "Wojciechowska",
-    "age": 41,
-    "gender": "K",
-    "college": "UNIWAR"
+    "imie": "Monika",
+    "nazwisko": "Wojciechowska",
+    "wiek": 41,
+    "plec": "K",
+    "uczelnia": "UNIWAR"
   },
   {
-    "firstName": "Sandra",
-    "lastName": "Dudek",
-    "age": 33,
-    "gender": "K",
-    "college": "UNIBYA"
+    "imie": "Sandra",
+    "nazwisko": "Dudek",
+    "wiek": 33,
+    "plec": "K",
+    "uczelnia": "UNIBYA"
   },
   {
-    "firstName": "Maciej",
-    "lastName": "Kubiak",
-    "age": 44,
-    "gender": "M",
-    "college": "UNIBYA"
+    "imie": "Maciej",
+    "nazwisko": "Kubiak",
+    "wiek": 44,
+    "plec": "M",
+    "uczelnia": "UNIBYA"
   },
   {
-    "firstName": "Edyta",
-    "lastName": "Szulc",
-    "age": 42,
-    "gender": "K",
-    "college": "AWFWAR"
+    "imie": "Edyta",
+    "nazwisko": "Szulc",
+    "wiek": 42,
+    "plec": "K",
+    "uczelnia": "AWFWAR"
   },
   {
-    "firstName": "Filip",
-    "lastName": "Kowal",
-    "age": 34,
-    "gender": "M",
-    "college": "UNISWD"
+    "imie": "Filip",
+    "nazwisko": "Kowal",
+    "wiek": 34,
+    "plec": "M",
+    "uczelnia": "UNISWD"
   },
   {
-    "firstName": "Andrzej",
-    "lastName": "Maj",
-    "age": 62,
-    "gender": "M",
-    "college": "UNIJAG"
+    "imie": "Andrzej",
+    "nazwisko": "Maj",
+    "wiek": 62,
+    "plec": "M",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Katarzyna",
-    "lastName": "Nowak",
-    "age": 38,
-    "gender": "K",
-    "college": "UNIJAG"
+    "imie": "Katarzyna",
+    "nazwisko": "Nowak",
+    "wiek": 38,
+    "plec": "K",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Krzysztof",
-    "lastName": "Zając",
-    "age": 49,
-    "gender": "M",
-    "college": "POLPOZ"
+    "imie": "Krzysztof",
+    "nazwisko": "Zając",
+    "wiek": 49,
+    "plec": "M",
+    "uczelnia": "POLPOZ"
   },
   {
-    "firstName": "Hubert",
-    "lastName": "Brzeziński",
-    "age": 38,
-    "gender": "M",
-    "college": "AWFGDA"
+    "imie": "Hubert",
+    "nazwisko": "Brzeziński",
+    "wiek": 38,
+    "plec": "M",
+    "uczelnia": "AWFGDA"
   },
   {
-    "firstName": "Bartosz",
-    "lastName": "Marciniak",
-    "age": 43,
-    "gender": "M",
-    "college": "UNIEKO"
+    "imie": "Bartosz",
+    "nazwisko": "Marciniak",
+    "wiek": 43,
+    "plec": "M",
+    "uczelnia": "UNIEKO"
   },
   {
-    "firstName": "Dorota",
-    "lastName": "Czarnecka",
-    "age": 47,
-    "gender": "K",
-    "college": "UNILOD"
+    "imie": "Dorota",
+    "nazwisko": "Czarnecka",
+    "wiek": 47,
+    "plec": "K",
+    "uczelnia": "UNILOD"
   },
   {
-    "firstName": "Aleksandra",
-    "lastName": "Kozłowska",
-    "age": 33,
-    "gender": "K",
-    "college": "UNIWAR"
+    "imie": "Aleksandra",
+    "nazwisko": "Kozłowska",
+    "wiek": 33,
+    "plec": "K",
+    "uczelnia": "UNIWAR"
   },
   {
-    "firstName": "Dominik",
-    "lastName": "Witkowski",
-    "age": 39,
-    "gender": "M",
-    "college": "UNIEKO"
+    "imie": "Dominik",
+    "nazwisko": "Witkowski",
+    "wiek": 39,
+    "plec": "M",
+    "uczelnia": "UNIEKO"
   },
   {
-    "firstName": "Mirosław",
-    "lastName": "Urbański",
-    "age": 59,
-    "gender": "M",
-    "college": "UMRTOR"
+    "imie": "Mirosław",
+    "nazwisko": "Urbański",
+    "wiek": 59,
+    "plec": "M",
+    "uczelnia": "UMRTOR"
   },
   {
-    "firstName": "Grzegorz",
-    "lastName": "Kwiatkowski",
-    "age": 53,
-    "gender": "M",
-    "college": "POLWRO"
+    "imie": "Grzegorz",
+    "nazwisko": "Kwiatkowski",
+    "wiek": 53,
+    "plec": "M",
+    "uczelnia": "POLWRO"
   },
   {
-    "firstName": "Arkadiusz",
-    "lastName": "Domański",
-    "age": 44,
-    "gender": "M",
-    "college": "UMKRAK"
+    "imie": "Arkadiusz",
+    "nazwisko": "Domański",
+    "wiek": 44,
+    "plec": "M",
+    "uczelnia": "UMKRAK"
   },
   {
-    "firstName": "Marta",
-    "lastName": "Pietrzak",
-    "age": 40,
-    "gender": "K",
-    "college": "SGHMWZ"
+    "imie": "Marta",
+    "nazwisko": "Pietrzak",
+    "wiek": 40,
+    "plec": "K",
+    "uczelnia": "SGHMWZ"
   },
   {
-    "firstName": "Sebastian",
-    "lastName": "Lis",
-    "age": 39,
-    "gender": "M",
-    "college": "AWFKRK"
+    "imie": "Sebastian",
+    "nazwisko": "Lis",
+    "wiek": 39,
+    "plec": "M",
+    "uczelnia": "AWFKRK"
   },
   {
-    "firstName": "Grażyna",
-    "lastName": "Sobczak",
-    "age": 50,
-    "gender": "K",
-    "college": "UMWROC"
+    "imie": "Grażyna",
+    "nazwisko": "Sobczak",
+    "wiek": 50,
+    "plec": "K",
+    "uczelnia": "UMWROC"
   },
   {
-    "firstName": "Zbigniew",
-    "lastName": "Kucharski",
-    "age": 61,
-    "gender": "M",
-    "college": "UNILOD"
+    "imie": "Zbigniew",
+    "nazwisko": "Kucharski",
+    "wiek": 61,
+    "plec": "M",
+    "uczelnia": "UNILOD"
   },
   {
-    "firstName": "Agnieszka",
-    "lastName": "Szymańska",
-    "age": 44,
-    "gender": "K",
-    "college": "AKAGUH"
+    "imie": "Agnieszka",
+    "nazwisko": "Szymańska",
+    "wiek": 44,
+    "plec": "K",
+    "uczelnia": "AKAGUH"
   },
   {
-    "firstName": "Izabela",
-    "lastName": "Maciejewska",
-    "age": 39,
-    "gender": "K",
-    "college": "UNICZE"
+    "imie": "Izabela",
+    "nazwisko": "Maciejewska",
+    "wiek": 39,
+    "plec": "K",
+    "uczelnia": "UNICZE"
   },
   {
-    "firstName": "Rafał",
-    "lastName": "Wasilewski",
-    "age": 40,
-    "gender": "M",
-    "college": "UNICZE"
+    "imie": "Rafał",
+    "nazwisko": "Wasilewski",
+    "wiek": 40,
+    "plec": "M",
+    "uczelnia": "UNICZE"
   },
   {
-    "firstName": "Angelika",
-    "lastName": "Sosnowska",
-    "age": 35,
-    "gender": "K",
-    "college": "AWFKRK"
+    "imie": "Angelika",
+    "nazwisko": "Sosnowska",
+    "wiek": 35,
+    "plec": "K",
+    "uczelnia": "AWFKRK"
   },
   {
-    "firstName": "Magdalena",
-    "lastName": "Lewandowska",
-    "age": 39,
-    "gender": "K",
-    "college": "UNIJAG"
+    "imie": "Magdalena",
+    "nazwisko": "Lewandowska",
+    "wiek": 39,
+    "plec": "K",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Patrycja",
-    "lastName": "Wróblewska",
-    "age": 36,
-    "gender": "K",
-    "college": "UNIEKO"
+    "imie": "Patrycja",
+    "nazwisko": "Wróblewska",
+    "wiek": 36,
+    "plec": "K",
+    "uczelnia": "UNIEKO"
   },
   {
-    "firstName": "Agata",
-    "lastName": "Baran",
-    "age": 33,
-    "gender": "K",
-    "college": "UNIKAT"
+    "imie": "Agata",
+    "nazwisko": "Baran",
+    "wiek": 33,
+    "plec": "K",
+    "uczelnia": "UNIKAT"
   },
   {
-    "firstName": "Helena",
-    "lastName": "Kowalczyk",
-    "age": 49,
-    "gender": "K",
-    "college": "UMLODZ"
+    "imie": "Helena",
+    "nazwisko": "Kowalczyk",
+    "wiek": 49,
+    "plec": "K",
+    "uczelnia": "UMLODZ"
   },
   {
-    "firstName": "Konrad",
-    "lastName": "Błaszczyk",
-    "age": 44,
-    "gender": "M",
-    "college": "POLSLK"
+    "imie": "Konrad",
+    "nazwisko": "Błaszczyk",
+    "wiek": 44,
+    "plec": "M",
+    "uczelnia": "POLSLK"
   },
   {
-    "firstName": "Anna",
-    "lastName": "Wiśniewska",
-    "age": 42,
-    "gender": "K",
-    "college": "UNIJAG"
+    "imie": "Anna",
+    "nazwisko": "Wiśniewska",
+    "wiek": 42,
+    "plec": "K",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Piotr",
-    "lastName": "Kowalski",
-    "age": 45,
-    "gender": "M",
-    "college": "UNIJAG"
+    "imie": "Piotr",
+    "nazwisko": "Kowalski",
+    "wiek": 45,
+    "plec": "M",
+    "uczelnia": "UNIJAG"
   },
   {
-    "firstName": "Kamil",
-    "lastName": "Szewczyk",
-    "age": 35,
-    "gender": "M",
-    "college": "SGHMWZ"
+    "imie": "Kamil",
+    "nazwisko": "Szewczyk",
+    "wiek": 35,
+    "plec": "M",
+    "uczelnia": "SGHMWZ"
   },
   {
-    "firstName": "Łukasz",
-    "lastName": "Sokołowski",
-    "age": 37,
-    "gender": "M",
-    "college": "UNIWRO"
+    "imie": "Łukasz",
+    "nazwisko": "Sokołowski",
+    "wiek": 37,
+    "plec": "M",
+    "uczelnia": "UNIWRO"
   },
   {
-    "firstName": "Weronika",
-    "lastName": "Jaworska",
-    "age": 34,
-    "gender": "K",
-    "college": "UNIMED"
+    "imie": "Weronika",
+    "nazwisko": "Jaworska",
+    "wiek": 34,
+    "plec": "K",
+    "uczelnia": "UNIMED"
   },
   {
-    "firstName": "Roman",
-    "lastName": "Mucha",
-    "age": 54,
-    "gender": "M",
-    "college": "UMLODZ"
+    "imie": "Roman",
+    "nazwisko": "Mucha",
+    "wiek": 54,
+    "plec": "M",
+    "uczelnia": "UMLODZ"
   },
   {
-    "firstName": "Adrian",
-    "lastName": "Kalinowski",
-    "age": 35,
-    "gender": "M",
-    "college": "UAMSIE"
+    "imie": "Adrian",
+    "nazwisko": "Kalinowski",
+    "wiek": 35,
+    "plec": "M",
+    "uczelnia": "UAMSIE"
   },
   {
-    "firstName": "Renata",
-    "lastName": "Borkowska",
-    "age": 42,
-    "gender": "K",
-    "college": "POLLOD"
+    "imie": "Renata",
+    "nazwisko": "Borkowska",
+    "wiek": 42,
+    "plec": "K",
+    "uczelnia": "POLLOD"
   }
 ]
