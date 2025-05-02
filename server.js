@@ -59,8 +59,8 @@ app.post("/tool2", async (req, res) => {
     const { persons } = await loadData();
 
     const foundPeople = persons
-      .filter((o) => o.college === collegeId)
-      .map((o) => `${o.firstName} ${o.lastName}`);
+      .filter((o) => o.uczelnia === collegeId)
+      .map((o) => `${o.imie} ${o.nazwisko}`);
 
     return res.json({ output: foundPeople.join(", ") })
   }
