@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Modelowanie przepływów turbulentnych w kanałach o zmiennej geometrii",
+    "college": "POLGDA",
+    "sponsor": "Fluid Dynamics Research"
+  },
+  {
+    "name": "Opracowanie nowych materiałów kompozytowych dla przemysłu lotniczego",
+    "college": "POLGDA",
+    "sponsor": "Aerospace Materials Corp"
+  },
+  {
+    "name": "Zastosowanie grafenu w budowie ultracienkich ogniw fotowoltaicznych",
+    "college": "POLWRO",
+    "sponsor": "Graphene Energy"
+  },
+  {
+    "name": "Wpływ polityki fiskalnej na innowacyjność małych i średnich przedsiębiorstw",
+    "college": "SGHMWZ",
+    "sponsor": "Fiscal Policy Institute"
+  },
+  {
+    "name": "Wpływ diety ketogenicznej na funkcje poznawcze u pacjentów z chorobą Alzheimera",
+    "college": "UMGDAN",
+    "sponsor": "Ketogenic Research Institute"
+  },
+  {
+    "name": "Projektowanie inteligentnych tkanin dla zastosowań medycznych",
+    "college": "POLLOD",
+    "sponsor": "Smart Textile Solutions"
+  },
+  {
+    "name": "Analiza komparatywna tożsamości narodowej w literaturze polskiej i niemieckiej XX wieku",
+    "college": "UNIWRO",
+    "sponsor": "Cultural Heritage Institute"
+  },
+  {
+    "name": "Wykorzystanie metod sztucznej inteligencji w diagnostyce wad materiałowych",
+    "college": "POLSLK",
+    "sponsor": "AI Material Inspection"
+  },
+  {
+    "name": "Optymalizacja algorytmów głębokiego uczenia w rozpoznawaniu wzorców na obrazach satelitarnych",
+    "college": "UNIWAR",
+    "sponsor": "SatelliteAI Tech"
+  },
+  {
+    "name": "Optymalizacja metod wytwarzania wodoru z wykorzystaniem energii słonecznej",
+    "college": "POLSLK",
+    "sponsor": "Solar Hydrogen Tech"
+  },
+  {
+    "name": "Analiza wydajności przetwarzania danych w systemach edge computing",
+    "college": "POLWAR",
+    "sponsor": "EdgeTech Systems"
+  },
+  {
+    "name": "Analiza mechanizmów epigenetycznych w rozwoju chorób autoimmunologicznych",
+    "college": "UMKLUB",
+    "sponsor": "Epigenetic Research Corp"
+  },
+  {
+    "name": "Nowoczesne techniki konserwacji dzieł sztuki z wykorzystaniem nanotechnologii",
+    "college": "ASTKRK",
+    "sponsor": "Art Conservation Tech"
+  },
+  {
+    "name": "Wpływ treningu interwałowego na regenerację mięśni u sportowców wyczynowych",
+    "college": "AWFKRK",
+    "sponsor": "Sports Performance Institute"
+  },
+  {
+    "name": "Wykorzystanie uczenia maszynowego w analizie obrazów medycznych",
+    "college": "UMLUBL",
+    "sponsor": "Medical AI Systems"
+  },
+  {
+    "name": "Wykorzystanie nowych polimerów biodegradowalnych w medycynie regeneracyjnej",
+    "college": "UNIJAG",
+    "sponsor": "EcoMed Materials"
+  },
+  {
+    "name": "Wpływ fal radiowych na wzrost roślin doniczkowych w zamkniętych pomieszczeniach",
+    "college": "UNIJAG",
+    "sponsor": "BioTech Solutions"
+  },
+  {
+    "name": "Wykorzystanie algorytmów genetycznych w optymalizacji ruchu miejskiego",
+    "college": "POLPOZ",
+    "sponsor": "Smart Traffic Systems"
+  },
+  {
+    "name": "Bioróżnorodność mikroorganizmów glebowych w obszarach po rekultywacji",
+    "college": "UNIOPL",
+    "sponsor": "Soil Biodiversity Research"
+  },
+  {
+    "name": "Zastosowanie sztucznej inteligencji w prognozowaniu zmian klimatycznych w skali mikro",
+    "college": "UNIJAG",
+    "sponsor": "ClimateAI Systems"
+  },
+  {
+    "name": "Opracowanie nowych katalizatorów do produkcji wodoru z biomasy",
+    "college": "POLWRO",
+    "sponsor": "HydroGen Solutions"
+  },
+  {
+    "name": "Biomarkery narażenia na mikroplastik w organizmie człowieka",
+    "college": "UNIGDA",
+    "sponsor": "EcoHealth Research"
+  },
+  {
+    "name": "Opracowanie biodegradowalnych nanokapsuł do kontrolowanego uwalniania leków",
+    "college": "UMLODZ",
+    "sponsor": "NanoPharma Solutions"
+  },
+  {
+    "name": "Nowe metody wykrywania biomarkerów nowotworowych w płynach ustrojowych",
+    "college": "UMPOZN",
+    "sponsor": "Cancer Detection Systems"
+  },
+  {
+    "name": "Analiza mechanizmów uszkodzenia DNA pod wpływem promieniowania kosmicznego",
+    "college": "UNIWAR",
+    "sponsor": "Space Radiation Research"
+  },
+  {
+    "name": "Wpływ rytmów dobowych na skuteczność farmakoterapii chorób przewlekłych",
+    "college": "UMKRAK",
+    "sponsor": "Chronotherapy Research"
+  },
+  {
+    "name": "Wpływ pola magnetycznego na krystalizację związków organicznych",
+    "college": "AKAGUH",
+    "sponsor": "Magnetic Materials Corp"
+  },
+  {
+    "name": "Wykorzystanie komórek macierzystych w regeneracji uszkodzonego rdzenia kręgowego",
+    "college": "UMWROC",
+    "sponsor": "Stem Cell Therapeutics"
+  },
+  {
+    "name": "Badanie wpływu zanieczyszczenia powietrza na funkcje poznawcze u dzieci w wieku szkolnym",
+    "college": "UNIPOZ",
+    "sponsor": "AirQuality Research"
+  },
+  {
+    "name": "Zastosowanie technologii rzeczywistości rozszerzonej w nauczaniu anatomii",
+    "college": "UMKRAK",
+    "sponsor": "AR Medical Education"
+  },
+  {
+    "name": "Wykorzystanie druku 3D w konstrukcji implantowalnych urządzeń medycznych",
+    "college": "POLWAR",
+    "sponsor": "3D Medical Print"
+  },
+  {
+    "name": "Nowe podejścia terapeutyczne w leczeniu opornych na antybiotyki zakażeń szpitalnych",
+    "college": "UNIMED",
+    "sponsor": "Antibiotic Resistance Solutions"
+  },
+  {
+    "name": "Biomarkery stresu psychicznego u studentów podczas sesji egzaminacyjnej",
+    "college": "UNIJAG",
+    "sponsor": "MentalHealth Pro"
+  },
+  {
+    "name": "Neuronowe korelaty percepcji czasu w warunkach izolacji społecznej",
+    "college": "UNIPOZ",
+    "sponsor": "NeuroTime Systems"
+  },
+  {
+    "name": "Synteza nowych materiałów nadprzewodzących w temperaturze pokojowej",
+    "college": "UNIWAR",
+    "sponsor": "SuperConduct Solutions"
+  },
+  {
+    "name": "Etyczne aspekty wykorzystania technologii AI w podejmowaniu decyzji medycznych",
+    "college": "KULKAT",
+    "sponsor": "AI Ethics Institute"
+  },
+  {
+    "name": "Wpływ wypalenia zawodowego na błędy medyczne wśród personelu medycznego",
+    "college": "UNIMED",
+    "sponsor": "Healthcare Wellbeing Institute"
+  },
+  {
+    "name": "Modele matematyczne przewidywania rozprzestrzeniania się chorób zakaźnych w aglomeracjach miejskich",
+    "college": "UNIKAT",
+    "sponsor": "Epidemic Control Systems"
+  },
+  {
+    "name": "Zastosowanie dronów w monitorowaniu zmian środowiskowych w obszarach chronionych",
+    "college": "UNIRZS",
+    "sponsor": "Environmental Drone Systems"
+  },
+  {
+    "name": "Wykorzystanie blockchain w zarządzaniu łańcuchem dostaw w przemyśle spożywczym",
+    "college": "UNIEKO",
+    "sponsor": "Blockchain Food Systems"
+  },
+  {
+    "name": "Podróże w czasie i przestrzeni w ujęciu praktycznym z elementami stabilizacji stanów pośrednich z wykorzystaniem dużych modeli językowych (LLM)",
+    "college": "UNIJAG",
+    "sponsor": "JJIT - Just JSON Intelligence Technologies"
+  },
+  {
+    "name": "Wpływ interferonów typu I na odpowiedź immunologiczną w infekcjach wirusowych",
+    "college": "UMKLUB",
+    "sponsor": "Viral Defense Systems"
+  },
+  {
+    "name": "Wykorzystanie nanocząstek srebra w oczyszczaniu wody pitnej",
+    "college": "AKAGUH",
+    "sponsor": "NanoWater Systems"
+  },
+  {
+    "name": "Właściwości kwantowe cząsteczek wody w stanie nadkrytycznym",
+    "college": "UNIJAG",
+    "sponsor": "Quantum Dynamics"
+  },
+  {
+    "name": "Rola mikrobioty jelitowej w patomechanizmie chorób neurodegeneracyjnych",
+    "college": "UNIWAR",
+    "sponsor": "NeuroBio Research"
+  },
+  {
+    "name": "Wpływ architektury miejskiej na poziom stresu u mieszkańców",
+    "college": "POLKRK",
+    "sponsor": "Urban Psychology Institute"
+  },
+  {
+    "name": "Wpływ dostępności transportu publicznego na jakość życia w małych miastach",
+    "college": "UNIOPL",
+    "sponsor": "Urban Transport Solutions"
+  },
+  {
+    "name": "Efektywność ekonomiczna zielonej transformacji w sektorze energetycznym",
+    "college": "SGHMWZ",
+    "sponsor": "Green Energy Analytics"
+  },
+  {
+    "name": "Modelowanie procesów erozji gleby w terenach górskich z wykorzystaniem GIS",
+    "college": "AKAGUH",
+    "sponsor": "GeoAnalysis Pro"
+  },
+  {
+    "name": "Wpływ zanieczyszczenia mikroplastikiem na ekosystemy wodne",
+    "college": "UNIGDA",
+    "sponsor": "Ocean Protection Institute"
+  }
+]
