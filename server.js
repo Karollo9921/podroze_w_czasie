@@ -14,9 +14,9 @@ const loadData = async () => {
     fs.readFile("./data/researches.json", "utf-8"),
   ]);
   return {
-    persons: JSON.parse(personsRaw),
-    colleges: JSON.parse(collegesRaw),
-    researches: JSON.parse(researchesRaw),
+    persons: JSON.parse(personsRaw.toString()),
+    colleges: JSON.parse(collegesRaw.toString()),
+    researches: JSON.parse(researchesRaw.toString()),
   };
 };
 
@@ -59,9 +59,10 @@ app.post("/tool2", async (req, res) => {
     const { persons } = await loadData();
 
     const foundPeople = persons
-      .filter((o) => o.uczelnia === collegeId)
+      .filter((o) => o.college === collegeId)
+      .map((o) => `${o.firstName} ${o.lastName}`);
 
-    return res.json({ output: foundPeople.map(p => `${p.imie} ${p.nazwisko}`).join(", ") })
+    return res.json({ output: foundPeople.join(", ") })
   }
 
   if (input.toLowerCase().includes("podaj nazwę uczelni") || input.toLowerCase().includes("podaj nazwe uczelni")) {
