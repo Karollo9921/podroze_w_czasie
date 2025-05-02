@@ -14,9 +14,9 @@ const loadData = async () => {
     fs.readFile("./data/researches.json", "utf-8"),
   ]);
   return {
-    persons: JSON.parse(personsRaw),
-    colleges: JSON.parse(collegesRaw),
-    researches: JSON.parse(researchesRaw),
+    persons: JSON.parse(personsRaw.toString()),
+    colleges: JSON.parse(collegesRaw.toString()),
+    researches: JSON.parse(researchesRaw.toString()),
   };
 };
 
