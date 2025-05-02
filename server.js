@@ -61,7 +61,7 @@ app.post("/tool2", async (req, res) => {
     const foundPeople = persons
       .filter((o) => o.uczelnia === collegeId)
 
-    return res.json({ output: foundPeople })
+    return res.json({ output: JSON.stringify(foundPeople) })
   }
 
   if (input.toLowerCase().includes("podaj nazwę uczelni") || input.toLowerCase().includes("podaj nazwe uczelni")) {
