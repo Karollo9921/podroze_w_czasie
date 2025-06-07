@@ -1,81 +1,36 @@
 import express from "express";
-import fs from "fs/promises";
 import bodyParser from "body-parser";
+import OpenAI from 'openai';
+import { prompt } from "./prompt.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
 
-const loadData = async () => {
-  const [personsRaw, collegesRaw, researchesRaw] = await Promise.all([
-    fs.readFile("./data/persons.json", "utf-8"),
-    fs.readFile("./data/colleges.json", "utf-8"),
-    fs.readFile("./data/researches.json", "utf-8"),
-  ]);
-  return {
-    persons: JSON.parse(personsRaw.toString()),
-    colleges: JSON.parse(collegesRaw.toString()),
-    researches: JSON.parse(researchesRaw.toString()),
-  };
-};
-
-app.post("/tool1", async (req, res) => {
-  const input = req.body.input;
-
-  if (input.startsWith("test")) {
-    return res.json({ output: input });
-  }
-
-  const { researches } = await loadData();
-
-  const research = researches.find((b) =>
-    b.name.toLowerCase().includes("podróże w czasie")
-  );
-
-  if (!research) {
-    return res.json({ output: "Nie znaleziono takich badań" })
-  }
-
-  const output = `Uczelnia: ${research?.college}, Sponsor: ${research.sponsor}`;
-
-  return res.json({ output });
+const openai = new OpenAI({
+  apiKey: process.env['OPENAI_API_KEY'],
 });
 
-app.post("/tool2", async (req, res) => {
-  const input = req.body.input;
 
-  if (input.startsWith("test")) {
-    return res.json({ output: input });
-  }
+app.post("/get-description", async (req, res) => {
+  const instruction = req.body.instruction;
 
-  const collegeId = input.match(/Uczelnia:\s*(\w+)/)?.[1];
+  const response = await openai.chat.completions.create({
+    model: "gpt-4o",
+    messages: [{ role: 'user', content: prompt },
+      {
+        role: 'user',
+        content: instruction,
+      },
+    ],
+    stream: false,
+    response_format: { type: 'text' },
+  });
 
-  if (!collegeId) {
-    return res.json({ output: "Zadanie nie powiodło się" });
-  }
-
-  if (input.toLowerCase().includes("podaj ludzi")) {
-    const { persons } = await loadData();
-
-    const foundPeople = persons
-      .filter((o) => o.uczelnia === collegeId)
-      .map((o) => `${o.imie} ${o.nazwisko}`);
-
-    return res.json({ output: foundPeople.join(", ") })
-  }
-
-  if (input.toLowerCase().includes("podaj nazwę uczelni") || input.toLowerCase().includes("podaj nazwe uczelni")) {
-    const { colleges } = await loadData();
-
-    const foundCollege = colleges.find((c) => c.id === collegeId);
-
-    if (!foundCollege) return res.json({ output: "Nie znaleziono uczelni" });
-
-    return res.json({ output: foundCollege.name })
-  }
-
-  return res.json({ output: "Zadanie nie powiodło się" });
+  return res.json({ description: response['choices'][0].message.content });
 });
 
 app.listen(PORT, () => {
