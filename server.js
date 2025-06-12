@@ -21,6 +21,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 app.use(express.json({ limit: '10mb' }));
 
 app.post('/chat', async (req, res) => {
+  console.dir(req.body, { depth: null });
   const instruction = req.body.instruction;
 
   console.log('🟡 Nowa instrukcja:', instruction);
