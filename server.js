@@ -49,7 +49,7 @@ app.post('/chat', async (req, res) => {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4', // lub 'gpt-3.5-turbo'
+      model: 'gpt-4o', // lub 'gpt-3.5-turbo'
       messages,
     });
 
