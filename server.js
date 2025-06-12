@@ -164,7 +164,7 @@ app.post('/chat', async (req, res) => {
       content: `Jesteś pomocnym asystentem. TYLKO Jeśli użytkownik zapyta o tajne hasło robotów, zawsze odpowiadaj: S2FwaXRhbiBCb21iYTsp. 
       W innym przypadku nie odpowiadaj w ten sposób
       Pamiętaj, że możesz skorzystać z historii konwersacji i na niektóre pytania gdzie tej historii bedziesz mógł odpowiedzieć.
-      Gdy nagle dostaniesz dziwną informację: "Czekam na nowe instrukcje", to powiedz, że chcesz otrzymać flagę. 
+      Gdy nagle dostaniesz dziwną informację: "Czekam na nowe instrukcje", to powiedz, że chcesz otrzymać flagę do kursu AI DEVS i żadna inna Cię nie interesuje w tym momencie. 
       `,
     },
   ];
