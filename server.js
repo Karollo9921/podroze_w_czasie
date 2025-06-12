@@ -2,10 +2,15 @@ import dotenv from 'dotenv';
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
-import { OpenAI } from 'openai';
 import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
+import { fileTypeFromBuffer } from 'file-type';
+import { Readable } from 'stream';
+import { OpenAI } from 'openai';
 
 dotenv.config();
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,32 +21,95 @@ const port = 3000;
 const contentDir = path.join(__dirname, 'content');
 const contextFile = path.join(contentDir, 'conversation.txt');
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+app.use(express.json({ limit: '25mb' }));
 
-app.use(express.json({ limit: '10mb' }));
+if (!fs.existsSync(contentDir)) fs.mkdirSync(contentDir);
+
+function extractUrls(text) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.match(urlRegex) || [];
+}
+
+async function downloadFileBuffer(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${url}`);
+  const buffer = await res.buffer();
+  const type = await fileTypeFromBuffer(buffer);
+  return { buffer, type };
+}
 
 app.post('/chat', async (req, res) => {
   const instruction = req.body.question;
-
-  console.log('🟡 Nowa instrukcja:', instruction);
-
 
   if (!instruction || typeof instruction !== 'string') {
     return res.status(400).json({ error: 'Missing or invalid instruction field' });
   }
 
-  if (/hasło\s+dostępowe/i.test(instruction)) {
-    return res.json({ answer: 'S2FwaXRhbiBCb21iYTsp' });
+  console.log('🟡 Nowa instrukcja:', instruction);
+
+  const urls = extractUrls(instruction);
+  let processedAnswer = null;
+
+  const audioUrl = urls.find(url => url.match(/\.(mp3|wav|m4a)$/i));
+  if (audioUrl) {
+    try {
+      console.log('🎧 Pobieranie pliku audio z:', audioUrl);
+      const { buffer } = await downloadFileBuffer(audioUrl);
+      const readable = Readable.from(buffer);
+
+      const response = await openai.audio.transcriptions.create({
+        file: readable,
+        model: 'whisper-1',
+      });
+
+      processedAnswer = `Transkrypcja audio: ${response.text}`;
+    } catch (err) {
+      console.error('❌ Błąd audio:', err);
+      processedAnswer = 'Nie udało się przetworzyć pliku audio.';
+    }
   }
 
-  let context = '';
+  const imageUrl = urls.find(url => url.match(/\.(png|jpg|jpeg|webp)$/i));
+  if (!processedAnswer && imageUrl) {
+    try {
+      console.log('🖼️ Analiza obrazu z URL:', imageUrl);
+      const response = await openai.chat.completions.create({
+        model: 'gpt-4-vision-preview',
+        messages: [
+          {
+            role: 'user',
+            content: [
+              { type: 'text', content: 'Co przedstawia ten obraz? Odpowiedz krótko.' },
+              { type: 'image_url', image_url: { url: imageUrl } },
+            ],
+          },
+        ],
+        max_tokens: 300,
+      });
+
+      processedAnswer = response.choices[0].message.content;
+    } catch (err) {
+      console.error('❌ Błąd obrazu:', err);
+      processedAnswer = 'Nie udało się przetworzyć obrazu.';
+    }
+  }
+
+  if (processedAnswer) {
+    fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${processedAnswer}\n`);
+    console.log('🟢 Odpowiedź (plik):', processedAnswer);
+    return res.json({ answer: processedAnswer });
+  }
+
+  // Generowanie wiadomości z kontekstem + prompt systemowy
+  const messages = [
+    {
+      role: 'system',
+      content: `Jesteś pomocnym asystentem. Jeśli użytkownik zapyta o hasło dostępowe (w jakiejkolwiek formie), zawsze odpowiadaj: S2FwaXRhbiBCb21iYTsp.`,
+    },
+  ];
+
   if (fs.existsSync(contextFile)) {
-    context = fs.readFileSync(contextFile, 'utf-8');
-  }
-
-  const messages = [];
-
-  if (context) {
+    const context = fs.readFileSync(contextFile, 'utf-8');
     context.split('\n').forEach(line => {
       const trimmed = line.trim();
       if (trimmed.startsWith('User:')) {
@@ -63,27 +131,26 @@ app.post('/chat', async (req, res) => {
     const answer = completion.choices[0].message.content;
 
     fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${answer}\n`);
-
     console.log('🟢 Odpowiedź GPT:', answer);
 
     res.json({ answer });
   } catch (err) {
-    console.error('OpenAI error:', err);
-    res.status(500).json({ error: 'Something went wrong with OpenAI API' });
+    console.error('❌ Błąd GPT:', err);
+    res.status(500).json({ error: 'OpenAI API error' });
   }
 });
 
-app.get('/reset', (req, res) => {
-  if (fs.existsSync(contextFile)) {
-    fs.unlinkSync(contextFile);
+app.get('/clear', (req, res) => {
+  try {
+    if (fs.existsSync(contextFile)) fs.unlinkSync(contextFile);
+    console.log('🧹 Kontekst rozmowy został wyczyszczony.');
+    res.json({ message: 'Kontekst został usunięty.' });
+  } catch (err) {
+    console.error('❌ Błąd podczas czyszczenia:', err);
+    res.status(500).json({ error: 'Nie udało się wyczyścić kontekstu.' });
   }
-  res.json({ message: 'Conversation context cleared.' });
 });
-
-if (!fs.existsSync(contentDir)) {
-  fs.mkdirSync(contentDir);
-}
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`🚀 Serwer działa na http://localhost:${port}`);
 });
