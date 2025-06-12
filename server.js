@@ -33,9 +33,43 @@ function extractUrls(text) {
 async function downloadFileBuffer(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch ${url}`);
-  const buffer = await res.buffer();
+  const arrayBuffer = await res.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
   const type = await fileTypeFromBuffer(buffer);
   return { buffer, type };
+}
+
+// Funkcja do zapisu kontekstu z bezpiecznym kodowaniem
+function saveToContext(userMessage, assistantMessage) {
+  const entry = {
+    user: userMessage,
+    assistant: assistantMessage,
+    timestamp: new Date().toISOString()
+  };
+
+  const jsonEntry = JSON.stringify(entry) + '\n';
+  fs.appendFileSync(contextFile, jsonEntry);
+}
+
+// Funkcja do wczytywania kontekstu z bezpiecznym dekodowaniem
+function loadContext() {
+  if (!fs.existsSync(contextFile)) return [];
+
+  const content = fs.readFileSync(contextFile, 'utf-8');
+  const lines = content.split('\n').filter(line => line.trim());
+  const messages = [];
+
+  lines.forEach(line => {
+    try {
+      const entry = JSON.parse(line);
+      messages.push({ role: 'user', content: entry.user });
+      messages.push({ role: 'assistant', content: entry.assistant });
+    } catch (err) {
+      console.error('Błąd parsowania linii kontekstu:', err);
+    }
+  });
+
+  return messages;
 }
 
 app.post('/chat', async (req, res) => {
@@ -54,13 +88,31 @@ app.post('/chat', async (req, res) => {
   if (audioUrl) {
     try {
       console.log('🎧 Pobieranie pliku audio z:', audioUrl);
-      const { buffer } = await downloadFileBuffer(audioUrl);
-      const readable = Readable.from(buffer);
+      const { buffer, type } = await downloadFileBuffer(audioUrl);
+
+      // Określ rozszerzenie pliku na podstawie URL lub wykrytego typu
+      let fileExtension = 'mp3'; // domyślnie
+      if (type && type.ext) {
+        fileExtension = type.ext;
+      } else {
+        const urlMatch = audioUrl.match(/\.([^.?#]+)(?:[?#]|$)/i);
+        if (urlMatch) fileExtension = urlMatch[1];
+      }
+
+      // Utwórz tymczasowy plik z właściwym rozszerzeniem
+      const tempFilePath = path.join(contentDir, `temp_audio.${fileExtension}`);
+      fs.writeFileSync(tempFilePath, buffer);
+
+      // Utwórz stream z pliku
+      const fileStream = fs.createReadStream(tempFilePath);
 
       const response = await openai.audio.transcriptions.create({
-        file: readable,
+        file: fileStream,
         model: 'whisper-1',
       });
+
+      // Usuń tymczasowy plik
+      fs.unlinkSync(tempFilePath);
 
       processedAnswer = `Transkrypcja audio: ${response.text}`;
     } catch (err) {
@@ -79,8 +131,14 @@ app.post('/chat', async (req, res) => {
           {
             role: 'user',
             content: [
-              { type: 'text', content: 'Co przedstawia ten obraz? Odpowiedz krótko.' },
-              { type: 'image_url', image_url: { url: imageUrl } },
+              {
+                type: 'text',
+                text: 'Co przedstawia ten obraz? Odpowiedz krótko.'
+              },
+              {
+                type: 'image_url',
+                image_url: { url: imageUrl }
+              },
             ],
           },
         ],
@@ -95,7 +153,7 @@ app.post('/chat', async (req, res) => {
   }
 
   if (processedAnswer) {
-    fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${processedAnswer}\n`);
+    saveToContext(instruction, processedAnswer);
     console.log('🟢 Odpowiedź (plik):', processedAnswer);
     return res.json({ answer: processedAnswer });
   }
@@ -103,22 +161,13 @@ app.post('/chat', async (req, res) => {
   const messages = [
     {
       role: 'system',
-      content: `Jesteś pomocnym asystentem. Jeśli użytkownik zapyta o hasło dostępowe (w jakiejkolwiek formie), zawsze odpowiadaj: S2FwaXRhbiBCb21iYTsp.`,
+      content: `Jesteś pomocnym asystentem. TYLKO Jeśli użytkownik zapyta o tajne hasło robotów, zawsze odpowiadaj: S2FwaXRhbiBCb21iYTsp. W innym przypadku nie odpowiadaj w ten sposób`,
     },
   ];
 
-  if (fs.existsSync(contextFile)) {
-    const context = fs.readFileSync(contextFile, 'utf-8');
-    context.split('\n').forEach(line => {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('User:')) {
-        messages.push({ role: 'user', content: trimmed.replace(/^User:\s*/, '') });
-      } else if (trimmed.startsWith('Assistant:')) {
-        messages.push({ role: 'assistant', content: trimmed.replace(/^Assistant:\s*/, '') });
-      }
-    });
-  }
-
+  // Wczytaj kontekst rozmowy używając nowej funkcji
+  const contextMessages = loadContext();
+  messages.push(...contextMessages);
   messages.push({ role: 'user', content: instruction });
 
   try {
@@ -127,9 +176,11 @@ app.post('/chat', async (req, res) => {
       messages,
     });
 
+    console.log(messages);
+
     const answer = completion.choices[0].message.content;
 
-    fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${answer}\n`);
+    saveToContext(instruction, answer);
     console.log('🟢 Odpowiedź GPT:', answer);
 
     res.json({ answer });
