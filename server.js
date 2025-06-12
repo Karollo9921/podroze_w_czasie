@@ -39,7 +39,7 @@ async function downloadFileBuffer(url) {
 }
 
 app.post('/chat', async (req, res) => {
-  const instruction = req.body.question;
+  const instruction = req.body.instruction;
 
   if (!instruction || typeof instruction !== 'string') {
     return res.status(400).json({ error: 'Missing or invalid instruction field' });
@@ -74,7 +74,7 @@ app.post('/chat', async (req, res) => {
     try {
       console.log('🖼️ Analiza obrazu z URL:', imageUrl);
       const response = await openai.chat.completions.create({
-        model: 'gpt-4-vision-preview',
+        model: 'gpt-4o',
         messages: [
           {
             role: 'user',
@@ -100,7 +100,6 @@ app.post('/chat', async (req, res) => {
     return res.json({ answer: processedAnswer });
   }
 
-  // Generowanie wiadomości z kontekstem + prompt systemowy
   const messages = [
     {
       role: 'system',
@@ -148,6 +147,17 @@ app.get('/clear', (req, res) => {
   } catch (err) {
     console.error('❌ Błąd podczas czyszczenia:', err);
     res.status(500).json({ error: 'Nie udało się wyczyścić kontekstu.' });
+  }
+});
+
+app.get('/reset', (req, res) => {
+  try {
+    if (fs.existsSync(contextFile)) fs.unlinkSync(contextFile);
+    console.log('🔁 Kontekst został zresetowany przez /reset.');
+    res.json({ message: 'Kontekst został zresetowany.' });
+  } catch (err) {
+    console.error('❌ Błąd podczas resetowania:', err);
+    res.status(500).json({ error: 'Nie udało się zresetować kontekstu.' });
   }
 });
 
