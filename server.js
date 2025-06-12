@@ -1,19 +1,25 @@
-require('dotenv').config();
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const { OpenAI } = require('openai');
+import dotenv from 'dotenv';
+import express from 'express';
+import fs from 'fs';
+import path from 'path';
+import { OpenAI } from 'openai';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
+
 const contentDir = path.join(__dirname, 'content');
 const contextFile = path.join(contentDir, 'conversation.txt');
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-app.use(express.json({ limit: '10mb' })); // większy limit na ewentualne base64
+app.use(express.json({ limit: '10mb' }));
 
-// POST /chat
 app.post('/chat', async (req, res) => {
   const instruction = req.body.instruction;
 
@@ -21,12 +27,10 @@ app.post('/chat', async (req, res) => {
     return res.status(400).json({ error: 'Missing or invalid instruction field' });
   }
 
-  // Jeśli ktoś pyta o hasło dostępowe
   if (/hasło\s+dostępowe/i.test(instruction)) {
     return res.json({ answer: 'S2FwaXRhbiBCb21iYTsp' });
   }
 
-  // Wczytanie poprzedniego kontekstu (jeśli istnieje)
   let context = '';
   if (fs.existsSync(contextFile)) {
     context = fs.readFileSync(contextFile, 'utf-8');
@@ -49,13 +53,12 @@ app.post('/chat', async (req, res) => {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o', // lub 'gpt-3.5-turbo'
+      model: 'gpt-4o',
       messages,
     });
 
     const answer = completion.choices[0].message.content;
 
-    // Zapisz nowy wpis w kontekście
     fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${answer}\n`);
 
     res.json({ answer });
@@ -65,7 +68,6 @@ app.post('/chat', async (req, res) => {
   }
 });
 
-// GET /reset
 app.get('/reset', (req, res) => {
   if (fs.existsSync(contextFile)) {
     fs.unlinkSync(contextFile);
@@ -73,7 +75,6 @@ app.get('/reset', (req, res) => {
   res.json({ message: 'Conversation context cleared.' });
 });
 
-// Utwórz folder content, jeśli nie istnieje
 if (!fs.existsSync(contentDir)) {
   fs.mkdirSync(contentDir);
 }
