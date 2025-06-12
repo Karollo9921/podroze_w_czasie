@@ -39,7 +39,7 @@ async function downloadFileBuffer(url) {
 }
 
 app.post('/chat', async (req, res) => {
-  const instruction = req.body.instruction;
+  const instruction = req.body.question;
 
   if (!instruction || typeof instruction !== 'string') {
     return res.status(400).json({ error: 'Missing or invalid instruction field' });
