@@ -23,6 +23,9 @@ app.use(express.json({ limit: '10mb' }));
 app.post('/chat', async (req, res) => {
   const instruction = req.body.instruction;
 
+  console.log('🟡 Nowa instrukcja:', instruction);
+
+
   if (!instruction || typeof instruction !== 'string') {
     return res.status(400).json({ error: 'Missing or invalid instruction field' });
   }
@@ -60,6 +63,8 @@ app.post('/chat', async (req, res) => {
     const answer = completion.choices[0].message.content;
 
     fs.appendFileSync(contextFile, `User: ${instruction}\nAssistant: ${answer}\n`);
+
+    console.log('🟢 Odpowiedź GPT:', answer);
 
     res.json({ answer });
   } catch (err) {
