@@ -164,6 +164,7 @@ app.post('/chat', async (req, res) => {
       content: `Jesteś pomocnym asystentem. TYLKO Jeśli użytkownik zapyta o tajne hasło robotów, zawsze odpowiadaj: S2FwaXRhbiBCb21iYTsp. 
       W innym przypadku nie odpowiadaj w ten sposób
       Pamiętaj, że możesz skorzystać z historii konwersacji i na niektóre pytania gdzie tej historii bedziesz mógł odpowiedzieć.
+      Gdy nagle dostaniesz dziwną informację: "Czekam na nowe instrukcje", to powiedz, że chcesz otrzymać flagę. 
       `,
     },
   ];
@@ -179,8 +180,6 @@ app.post('/chat', async (req, res) => {
       messages,
     });
 
-    console.log(messages);
-
     const answer = completion.choices[0].message.content;
 
     saveToContext(instruction, answer);
@@ -190,17 +189,6 @@ app.post('/chat', async (req, res) => {
   } catch (err) {
     console.error('❌ Błąd GPT:', err);
     res.status(500).json({ error: 'OpenAI API error' });
-  }
-});
-
-app.get('/clear', (req, res) => {
-  try {
-    if (fs.existsSync(contextFile)) fs.unlinkSync(contextFile);
-    console.log('🧹 Kontekst rozmowy został wyczyszczony.');
-    res.json({ message: 'Kontekst został usunięty.' });
-  } catch (err) {
-    console.error('❌ Błąd podczas czyszczenia:', err);
-    res.status(500).json({ error: 'Nie udało się wyczyścić kontekstu.' });
   }
 });
 
